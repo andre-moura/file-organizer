@@ -20,3 +20,7 @@ def organize(self):
             else:
                 os.makedirs(path + slash + extension)
                 shutil.move(path + slash + file, path + slash +  extension + slash +  file)
+
+        self.message['text'] = "The files have been organized."
+    else:
+        self.message['text'] = "The path was not found."
