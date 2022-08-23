@@ -1,4 +1,9 @@
+from functools import partial
 from tkinter import *
+from file_organizer import organize
+# import os
+# import shutil
+# import platform
 
 class Application:
     def __init__(self, master=None):
@@ -26,12 +31,12 @@ class Application:
         self.lb_path = Label(self.second_container,text="Path ", font=self.default_font)
         self.lb_path.pack(side=LEFT)
 
-        self.lb_path = Entry(self.second_container)
-        self.lb_path["width"] = 30
-        self.lb_path["font"] = self.default_font
-        self.lb_path.pack(side=LEFT)
-
-        self.btn_organize = Button(self.fourth_container)
+        self.path = Entry(self.second_container)
+        self.path["width"] = 30
+        self.path["font"] = self.default_font
+        self.path.pack(side=LEFT)
+        self.path.place
+        self.btn_organize = Button(self.fourth_container, command=lambda: organize(self))
         self.btn_organize["text"] = "Organize"
         self.btn_organize["font"] = ("Calibri", "8")
         self.btn_organize["width"] = 12
@@ -39,7 +44,6 @@ class Application:
 
         self.mensagem = Label(self.fourth_container, text="", font=self.default_font)
         self.mensagem.pack()
-
 
 root = Tk()
 Application(root)
