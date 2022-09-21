@@ -1,4 +1,5 @@
-<img src="https://img.shields.io/badge/python-v3.10.7-blue"/> 
+<img src="https://img.shields.io/badge/python-v3.10.7-blue" />
+
 # File Organizer
 I created this application with the intention of organizing my desktop files separated into folders of their respective extensions
 
